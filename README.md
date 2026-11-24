@@ -39,7 +39,14 @@ Practice trial-0 (6 games vs the house gauntlet, depth-2 to nodes-500k):
 | v1 | 0.5/6 | king walked into mate; pawn pushes too eager |
 | king safety + calmer pawns | 1.5/6 | beat depth-3 |
 | PST eval + 80k nodes | 2.0/6 | beat depth-2, drew depth-3 and depth-4 |
-| PST eval + 120k nodes | … | (trial-0d running) |
+| PST eval + 120k nodes | 2.5/6 | beat depth-4, drew nodes-250k (~1,191 Elo) |
+| PST eval + captures-only quiescence + 150k nodes | 2.5/6 on trial-0 and 2.5/6 on trial-1 | beat depth-2 and depth-4, drew depth-3 and nodes-250k, lost to nodes-100k and nodes-500k (~1,191 Elo) |
+
+**Verdict: this engine does NOT beat the house baseline (sunfish, ~1,325–1,365 Elo
+on the practice set).** It is a solid, correct engine that wins against the
+depth-2/3/4 gauntlet and draws the nodes-250k engine, but it loses to
+nodes-100k and nodes-500k, so it does not take a paid place. Submitted as a
+complete entry; the gap is ~175 Elo of search/eval strength.
 
 ## Files
 
